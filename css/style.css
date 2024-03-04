@@ -159,6 +159,23 @@ form > h1 {
   box-shadow: 2px 4px 8px #4382ff42;
 }
 
+.form-control.error {
+  position: relative;
+}
+
+.form-control.error::after {
+  content: "Passwords do not match.";
+  position: absolute;
+  top: calc(100% + 3px);
+  color: red;
+  font-size: 0.8rem;
+}
+
+.form-control.error input {
+  border: 2px solid red;
+  box-shadow: 2px 4px 8px rgba(255, 0, 0, 0.251);
+}
+
 .footer {
   margin-top: 2rem;
   padding-inline: var(--section-padding);
@@ -178,6 +195,10 @@ button[form="sign-up"] {
 
 button[form="sign-up"]:hover {
   background-color: #4b5b3d;
+}
+
+#sign-up-btn:disabled {
+  opacity: 0.7;
 }
 
 .footer p {
